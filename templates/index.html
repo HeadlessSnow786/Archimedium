@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+{% block body %}
+<!-- Showcase -->
+<section class="bg-dark text-light p-5 text-center">
+    <div class="container">
+        <div>
+            <div>
+                <h1 class="text-warning">
+                    Free AP Calculus BC Notes
+                </h1>
+                <p class="lead my-4">
+                    Find quick review guides for each unit of the AP Calculus BC course alongside an AI assistant that
+                    can generate practice problems and explain solutions.
+                </p>
+                <button class="btn btn-primary btn-lg btn-outline-light">Start Here</button>
+                <div>
+                    <img src="img/showcase.svg" alt="" class="img-fluid w-50">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Boxes -->
+<section class="p-5"></section>
+<div class="container">
+    <div class="row text-center">
+        <div class="col-md">
+            <div class="card rounded bg-dark text-light">
+                <div class="card-body text-center">
+                    <div class="h1 mb-1">
+                        <i class="bi bi-arrows-collapse-vertical"></i>
+                    </div>
+                </div>
+                <h3 class="card-title mb-3">
+                    Unit 1
+                </h3>
+                <p class="card-text p-1">Infinite Sequences and Series</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="card bg-dark text-light">
+                <div class="card-body text-center">
+                    <div class="h1 mb-1">
+                        <i class="bi bi-activity"></i>
+                    </div>
+                </div>
+                <h3 class="card-title mb-3">
+                    Unit 2
+                </h3>
+                <p class="card-text p-1">Differentiation: Definition and Fundamental Properties</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="card bg-dark text-light">
+                <div class="card-body text-center">
+                    <div class="h1 mb-1">
+                        <i class="bi bi-braces"></i>
+                    </div>
+                </div>
+                <h3 class="card-title mb-3">
+                    Unit 3
+                </h3>
+                <p class="card-text p-1">Differentiation: Composite, Implicit, and Inverse Functions</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="card bg-dark text-light">
+                <div class="card-body text-center">
+                    <div class="h1 mb-1">
+                        <i class="bi bi-alt"></i>
+                    </div>
+                </div>
+                <h3 class="card-title mb-3">
+                    Unit 4
+                </h3>
+                <p class="card-text p-1">Contextual Applications of Differentiation</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    </div>
+    <div class="row pt-5 text-center">
+        <div class="col-md">
+            <div class="card bg-dark text-light">
+                <div class="card-body text-center">
+                    <div class="h1 mb-1">
+                        <i class="bi bi-clipboard-pulse"></i>
+                    </div>
+                </div>
+                <h3 class="card-title mb-3">
+                    Unit 5
+                </h3>
+                <p class="card-text p-1">Analytical Applications of Differentiation</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="card bg-dark text-light">
+                <div class="card-body text-center">
+                    <div class="h1 mb-1">
+                        <i class="bi bi-bar-chart-line"></i>
+                    </div>
+                </div>
+                <h3 class="card-title mb-3">
+                    Unit 6
+                </h3>
+                <p class="card-text p-1">Integration and Accumulation of Change</p>
+                <a href="{{ url_for('unitSix') }}" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="card bg-dark text-light">
+                <div class="card-body text-center">
+                    <div class="h1 mb-1">
+                        <i class="bi bi-chevron-double-up"></i>
+                    </div>
+                </div>
+                <h3 class="card-title mb-3">
+                    Unit 7
+                </h3>
+                <p class="card-text p-1">Differential Equations</p>
+                <a href="templates/unitSeven.html" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="card bg-dark text-light">
+                <div class="card-body text-center">
+                    <div class="h1 mb-1">
+                        <i class="bi bi-clipboard-data"></i>
+                    </div>
+                </div>
+                <h3 class="card-title mb-3">
+                    Unit 8
+                </h3>
+                <p class="card-text p-1">Applications of Integration</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    </div>
+    <div class="row pt-5 text-center">
+        <div class="col-md">
+            <div class="card bg-dark text-light">
+                <div class="card-body text-center">
+                    <div class="h1 mb-1">
+                        <i class="bi bi-rainbow"></i>
+                    </div>
+                </div>
+                <h3 class="card-title mb-3">
+                    Unit 9
+                </h3>
+                <p class="card-text p-1">Parametric Equations, Polar Coordinates, and Vector-Valued Functions</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="card bg-dark text-light">
+                <div class="card-body text-center">
+                    <div class="h1 mb-1">
+                        <i class="bi bi-sign-intersection"></i>
+                    </div>
+                </div>
+                <h3 class="card-title mb-3">
+                    Unit 10
+                </h3>
+                <p class="card-text p-1">Infinite Sequences and Series</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
