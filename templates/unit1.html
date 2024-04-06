@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block body %}
+<!-- Notes -->
+<section class="text-dark p-5 text-left">
+    <div class="container">
+        <div>
+            <div>
+                <p>
+                    Unit 1 of AP Calculus BC covers the topic of Limits and Continuity. This foundational unit provides
+                    essential concepts for understanding calculus.
+
+                    Limit and Continuity Notes
+
+                    The concept of a limit is foundational in calculus. When we say the limit of a function as x
+                    approaches a certain value, we are referring to the value the function approaches as the inputs get
+                    arbitrarily close to that value.
+
+                    The formal definition of a limit is as follows:
+
+                    $$ \lim_{{x\to a}}f(x) = L $$
+
+                    This implies that the values of f(x) approach L as x approaches a.
+
+                    For example, consider the function $$f(x) = x^2$$ and we want to find the limit as x approaches 2.
+                    We would say that:
+
+                    $$ \lim_{{x\to 2}} x^2 = 4 $$
+
+                    Because the values of x^2 get arbitrarily close to 4 as x gets arbitrarily close to 2.
+
+                    Continuity is a related concept. A function is considered continuous if it has no jumps, breaks, or
+                    holes. More formally, a function $$f(x)$$ is continuous at $$x = a$$ if
+
+                    $$ \lim_{{x\to a}}f(x) = f(a) $$
+
+                    That is, the value of the function at a is equal to the limit of the function as x approaches a.
+
+                    We can use the concepts of limits and continuity to understand and evaluate complex functions. For
+                    example, we can use the limit definition:
+
+                    $$ \lim_{{h\to 0}} \frac{f(a+h)-f(a)}{h} $$
+
+                    To calculate the derivative of a function at a point a, which provides us with the rate of change of
+                    the function at that point.
+
+                    Another important theorem relating limits and continuity is the Intermediate Value Theorem. This
+                    theorem states that if a function f is continuous on the interval [a,b] and k is any number between
+                    f(a) and f(b), then there is at least one number c in the interval [a,b] such that f(c) = k.
+
+                    In other words, if we draw a line from (a, f(a)) to (b, f(b)), the line will pass through every y
+                    value between f(a) and f(b). This gives us a way to solve for values in the range of a continuous
+                    function.
+
+                    Unit 1 in AP Calculus BC also covers special cases of limits and continuity, including the concept
+                    of limits at infinity, and the behavior of functions around holes and vertical asymptotes.
+
+                    The limit as x approaches infinity (or negative infinity) refers to the behavior of a function as
+                    its inputs get arbitrarily large (or large in the negative direction). The notation for this is:
+
+                    $$ \lim_{{x\to \infty}}f(x) = L $$
+
+                    A function may have a hole at a certain point if the function is undefined at that point, but
+                    defined everywhere else nearby. An asymptote is a line that a graph approaches but never touches.
+
+                    All these concepts together provide a strong foundation to proceed to the subsequent units that deal
+                    with differentiation and integration, which are the building blocks of calculus. Recall these
+                    concepts, know how to apply them, and understand their diagrams and graphical representations will
+                    be indeed helpful for your AP Calculess BC exam. Good luck.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
