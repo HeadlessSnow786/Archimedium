@@ -5,38 +5,95 @@
     <div class="container">
         <div>
             <div>
-                <p>
-                    Unit 2: Differentiation: Definition and Fundamental Properties
+                <h1>AP Calculus BC - Unit 2: Differentiation: Definition and Fundamental Properties</h1>
 
-                    Limits Definition: A function (f(x)) has a limit (L) as (x) approaches (a) denoted by [\\lim_{{x\\to
-                    a}} f(x) = L] if for every number (\\epsilon > 0) there exists a number (\\delta > 0) such that,
-                    whenever
-                    (0 < |x-a| < \\delta), we have (|f(x)-L| < \\epsilon). Key Rules: Limit of a Constant:
-                        (\\lim_{{x\\to a}} c=c) Limit of a Sum: (\\lim_{{x\\to a}} [f(x) + g(x)]=\\lim_{{x\\to a}} f(x)
-                        + \\lim_{{x\\to a}} g(x)) Limit of a Product: (\\lim_{{x\\to a}} [f(x) \\cdot
-                        g(x)]=\\lim_{{x\\to a}} f(x) \\cdot \\lim_{{x\\to a}} g(x)) Limit of a Quotient: (\\lim_{{x\\to
-                        a}} \\frac{f(x)}{g(x)}=\\frac{\\lim_{{x\\to a}} f(x)}{\\lim_{{x\\to a}} g(x)}) if (\\lim_{{x\\to
-                        a}} g(x) \\neq 0) Continuity Definition: A function (f) is said to be continuous at (x=a) if
-                        (\\lim_{{x\\to a}} f(x)=f(a)). If (f) is continuous at every point in its domain, then it is
-                        simply said to be continuous. Intermediate Value Theorem (IVT): If a function (f) is continuous
-                        on a closed interval ([a,b]) and (k) is any number between (f(a)) and (f(b)), then there exists
-                        at least one number (c) in the interval ([a,b]) such that (f(c)=k). Derivatives Definition: The
-                        derivative of a function (f) at a point (x=a), denoted (f'(a)), measures the rate at which (f)
-                        changes at (x=a). It is defined by (f'(a)=\\lim_{{h\\to 0}}\\frac{f(a+h)-f(a)}{h}) if this limit
-                        exists. Key Properties: Product Rule: ((fg)'=f'g + fg') Quotient Rule:
-                        (\\left(\\frac{f}{g}\\right)'=\\frac{f'g - fg'}{g^2}) Chain Rule: If (y=f(u)) and (u=g(x)), then
-                        (y'=dy/dx=(dy/du)(du/dx)=f'(u)g'(x)) Power Rule: If (f(x)=x^n), then (f'(x)=nx^{n-1}).
-                        Applications of Derivatives Tangent lines: The tangent line to the curve of a function (f) at a
-                        point (a) has the equation (y=f(a) + f'(a)(x-a)). Local Extrema: If (f'(a)=0) and (f'(x))
-                        changes sign at (x=a), then (f) has a local max/min at (x=a). The Mean Value Theorem (MVT): If a
-                        function (f) is both continuous on the closed interval ([a,b]) and differentiable on the open
-                        interval ((a,b)), there exists at least one number (c) in ((a,b)) such that
-                        (f'(c)=(f(b)-f(a))/(b-a)). Implicit Differentiation: It's a method to find the derivative of a
-                        function defined implicitly. If (y) is a differentiable function of (x), and is given implicitly
-                        by (F(x, y)=0), then the derivative of (y) can be found as (\\frac{dy}{dx}=-\\frac{F_x}{F_y})
-                        where (F_x=\\frac {d}{dx} F(x,y)) and (F_y=\\frac {dF}{dy}) ) </p>
+                <h2>2.1 Definition of the Derivative</h2>
+                <p>The derivative of a function measures how the function's output value changes as the input value
+                    changes. The derivative at a point can be defined as:</p>
+                <pre>
+f'(x) = lim<sub>h→0</sub> (f(x+h) - f(x)) / h
+</pre>
+                <p><strong>Example:</strong> Find the derivative of f(x) = x².</p>
+                <ul>
+                    <li>f'(x) = lim<sub>h→0</sub> ((x+h)² - x²) / h</li>
+                    <li>= lim<sub>h→0</sub> (x² + 2xh + h² - x²) / h</li>
+                    <li>= lim<sub>h→0</sub> (2xh + h²) / h</li>
+                    <li>= lim<sub>h→0</sub> 2x + h</li>
+                    <li>= 2x</li>
+                </ul>
+
+                <h2>2.2 The Power Rule</h2>
+                <p>The power rule is a basic rule for differentiating functions of the form f(x) = xⁿ. If n is a real
+                    number, then:</p>
+                <pre>
+f'(x) = n * x^(n-1)
+</pre>
+                <p><strong>Example:</strong> Find the derivative of f(x) = x³.</p>
+                <ul>
+                    <li>f'(x) = 3 * x^(3-1)</li>
+                    <li>= 3x²</li>
+                </ul>
+
+                <h2>2.3 The Product Rule</h2>
+                <p>For two functions u(x) and v(x), the product rule states:</p>
+                <pre>
+(uv)' = u'v + uv'
+</pre>
+                <p><strong>Example:</strong> Find the derivative of f(x) = x² * sin(x).</p>
+                <ul>
+                    <li>Let u = x² and v = sin(x)</li>
+                    <li>u' = 2x and v' = cos(x)</li>
+                    <li>f'(x) = (x²)' * sin(x) + x² * (sin(x))'</li>
+                    <li>= 2x * sin(x) + x² * cos(x)</li>
+                </ul>
+
+                <h2>2.4 The Quotient Rule</h2>
+                <p>For two functions u(x) and v(x), the quotient rule states:</p>
+                <pre>
+(u/v)' = (u'v - uv') / v²
+</pre>
+                <p><strong>Example:</strong> Find the derivative of f(x) = (x²) / (sin(x)).</p>
+                <ul>
+                    <li>Let u = x² and v = sin(x)</li>
+                    <li>u' = 2x and v' = cos(x)</li>
+                    <li>f'(x) = (2x * sin(x) - x² * cos(x)) / (sin(x))²</li>
+                </ul>
+
+                <h2>2.5 Derivatives of Trigonometric Functions</h2>
+                <p>Derivatives of basic trigonometric functions include:</p>
+                <ul>
+                    <li>(sin(x))' = cos(x)</li>
+                    <li>(cos(x))' = -sin(x)</li>
+                    <li>(tan(x))' = sec²(x)</li>
+                </ul>
+                <p><strong>Example:</strong> Find the derivative of f(x) = tan(x).</p>
+                <ul>
+                    <li>f'(x) = sec²(x)</li>
+                </ul>
+
+                <h2>2.6 Chain Rule</h2>
+                <p>The chain rule is used for differentiating composite functions. If a function y = f(u) and u = g(x),
+                    then the chain rule states:</p>
+                <pre>
+dy/dx = (dy/du) * (du/dx)
+</pre>
+                <p><strong>Example:</strong> Find the derivative of f(x) = (3x² + 2)⁵.</p>
+                <ul>
+                    <li>Let u = 3x² + 2</li>
+                    <li>f'(x) = 5 * (3x² + 2)⁴ * (6x)</li>
+                </ul>
+
+                <h2>2.7 Implicit Differentiation</h2>
+                <p>Implicit differentiation is used when a function is not given explicitly. Differentiate all terms
+                    with respect to x, then solve for dy/dx.</p>
+                <p><strong>Example:</strong> Find dy/dx if y³ + xy = 1.</p>
+                <ul>
+                    <li>d/dx (y³) + d/dx (xy) = d/dx (1)</li>
+                    <li>3y² * dy/dx + (x * dy/dx + y) = 0</li>
+                    <li>dy/dx(3y² + x) = -y</li>
+                    <li>dy/dx = -y / (3y² + x)</li>
+                </ul>
             </div>
-
         </div>
     </div>
 </section>

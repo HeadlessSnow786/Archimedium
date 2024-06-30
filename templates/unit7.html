@@ -5,93 +5,78 @@
     <div class="container">
         <div>
             <div>
-                <p>
-                    Unit 6: Integration and Accumulation of Change
-                    I. Antiderivatives & Indefinite Integrals
-                    An antiderivative F of a function f is a differentiable function whose derivative is equal to the
-                    original function f. If $F '(x) = f(x)$, then we say that F is an antiderivative of f.
+                <h1>AP Calculus BC - Unit 7: Differential Equations</h1>
 
-                    An indefinite integral of a function f is a family of functions F that are antiderivatives of f.
+                <h2>7.1 Modeling Situations with Differential Equations</h2>
+                <p>Understanding how to represent real-world scenarios using differential equations. A differential
+                    equation expresses a relationship involving rates of change and the functions they affect.</p>
+                <p><strong>Example:</strong></p>
+                <p>Consider a population growing at a rate proportional to its size. This can be modeled by the
+                    differential equation \( \frac{dP}{dt} = kP \).</p>
+                <p><strong>Solution:</strong> The solution to this differential equation is \( P(t) = P_0 e^{kt} \),
+                    where \( P_0 \) is the initial population and \( k \) is the growth constant.</p>
 
-                    $$ \int f(x) dx = F(x) + C + D $$
+                <h2>7.2 Verifying Solutions for Differential Equations</h2>
+                <p>You’ll need to determine whether a given function satisfies a given differential equation.</p>
+                <p><strong>Example:</strong></p>
+                <p>Verify that \( y = e^{4x} \) is a solution to the differential equation \( \frac{dy}{dx} = 4y \).</p>
+                <p><strong>Solution:</strong> Compute \( \frac{dy}{dx} = 4e^{4x} \). Since \( 4e^{4x} = 4y \), the
+                    function \( y = e^{4x} \) satisfies the differential equation.</p>
 
-                    C represents the constant of integration, which accounts for the entire family of solutions.
+                <h2>7.3 Sketching Slope Fields</h2>
+                <p>A slope field is a graphical representation of a differential equation, showing the direction of the
+                    tangent lines at various points.</p>
+                <p><strong>Example:</strong></p>
+                <p>Sketch a slope field for \( \frac{dy}{dx} = x - y \).</p>
+                <p><strong>Solution:</strong> Calculate the slopes at points on a grid, e.g., at (1,1), \( \frac{dy}{dx}
+                    = 1-1 = 0 \); at (0,0), \( \frac{dy}{dx} = 0-0 = 0 \); at (2,1), \( \frac{dy}{dx} = 2-1 = 1 \), etc.
+                    Draw small line segments with these slopes at the respective points.</p>
 
-                    II. Fundamental Theorem of Calculus
-                    The First Fundamental Theorem of Calculus states:
+                <h2>7.4 Finding General Solutions using Separation of Variables</h2>
+                <p>Solve differential equations by separating variables and integrating each side.</p>
+                <p><strong>Example:</strong></p>
+                <p>Solve \( \frac{dy}{dx} = y \cdot \cos(x) \).</p>
+                <p><strong>Solution:</strong> Separate variables: \( \frac{dy}{y} = \cos(x) \, dx \). Integrate both
+                    sides: \( \ln|y| = \sin(x) + C \). Solve for y: \( y = Ce^{\sin(x)} \).</p>
 
-                    If a function f is continuous on the interval [a,b] and F is an antiderivative of f on an interval
-                    containing [a,b], then
+                <h2>7.5 Finding Particular Solutions using Initial Conditions</h2>
+                <p>Use an initial condition to find the particular solution for a differential equation.</p>
+                <p><strong>Example:</strong></p>
+                <p>Solve \( \frac{dy}{dx} = xy \) with initial condition \( y(0) = 3 \).</p>
+                <p><strong>Solution:</strong> Separate: \( \frac{dy}{y} = x \, dx \). Integrate: \( \ln|y| =
+                    \frac{x^2}{2} + C \). Solve for y: \( y = Ce^{\frac{x^2}{2}} \). Use initial condition: \( 3 = Ce^0
+                    \rightarrow C = 3 \). Therefore, \( y = 3e^{\frac{x^2}{2}} \).</p>
 
-                    $$ \int_a^b f(x) dx = F(b) - F(a)
-                    $$
-
-                    The Second Fundamental Theorem of Calculus states:
-
-                    If f is a function continuous on an open interval I containing a, then, for every x in the interval,
-
-                    $$ \frac{d}{dx} \int_a^x f(t) dt = f(x) $$
-
-                    III. Definite Integrals
-                    The definite integral of a function f from a to b is the signed area between the x-axis and the
-                    graph of the function from x=a to x=b.
-
-                    $$ \int_a^b f(x) dx $$
-
-                    Note: If f(x) is greater than 0 for all x in the interval [a,b], then $\int_a^b f(x) dx$ is the
-                    exact area under the curve y=f(x) from x=a to x=b. If f(x) is less than 0, then the "area" is taken
-                    as negative.
-
-                    Properties of Definite Integrals:
-
-                    $\int_a^a f(x) dx = 0$
-                    $\int_a^b f(x) dx = -\int_b^a f(x) dx$
-                    $\int_a^b (f(x)±g(x)) dx = \int_a^b f(x) dx ± \int_a^b g(x) dx$
-                    $\int_a^b (cf(x)) dx = c \int_a^b f(x) dx$ (c is a constant)
-                    IV. Accumulation Functions
-                    An accumulation function is a function defined by an integral with variable limits:
-
-                    $$ F(x) = \int_a^x f(t) dt $$
-
-                    where f(t) is a continuous function on an interval I containing a.
-
-                    V. Techniques of Integration
-                    1. Substitution (u-substitution):
-
-                    If g’ is continuous on [a,b] and f is continuous on the range of u=g(x), then
-
-                    $$ \int_a^b f(g(x))g'(x) dx = \int_{g(a)}^{g(b)} f(u) du $$
-
-                    It allows us to transform the integral of a complex function into an integral that is easier to
-                    evaluate.
-
-                    2. Integration By Parts:
-
-                    $$ \int u dv = uv - \int v du $$
-
-                    It is useful when the integral is a product of two functions; one that is easily integrable after
-                    differentiation and another that simplifies upon differentiation.
-
-                    3. Partial Fractions:
-
-                    When integrating a rational function, where the degree of the numerator is less than the degree of
-                    the denominator, it can be useful to express the integrand as a sum of partial fractions. You can
-                    then integrate term by term.
-
-                    VI. Improper Integrals
-                    An improper integral is the limit of a definite integral as an endpoint of the interval of
-                    integration approaches either a specified real number, or ∞, or −∞. It can also be due to
-                    discontinuities in the function.
-
-                    Example:
-
-                    $$ \int_a^∞ f(x) dx = \lim_{b\to∞} \int_a^b f(x) dx $$
-
-                    For this to be defined, the limit must exist.
-
-                    These are the primary topics for Unit 6. Be sure to practice a variety of problems dealing with each
-                    type of integration in order to cement your understanding. Good luck with your studies!
+                <h2>7.6 Exponential Growth and Decay</h2>
+                <p>Modeling scenarios where a quantity grows or decays at a rate proportional to its size.</p>
+                <p><strong>Example:</strong></p>
+                <p>P(t) = P<sub>0</sub>e<sup>kt</sup> models population growth.</p>
+                <p><strong>Solution:</strong> For a population of 100 growing at 5% per year: \( P(t) = 100e^{0.05t} \).
                 </p>
+
+                <h2>7.7 Logistic Growth Models</h2>
+                <p>Modeling scenarios with a carrying capacity, where growth slows as population size approaches the
+                    carrying capacity.</p>
+                <p><strong>Example:</strong></p>
+                <p>The logistic model is \( P(t) = \frac{K}{1 + \left( \frac{K - P_0}{P_0} \right)e^{-rt}} \).</p>
+                <p><strong>Solution:</strong> For a population with carrying capacity 500, initial population 10, and
+                    growth rate 0.1: \( P(t) = \frac{500}{1 + 49e^{-0.1t}} \).</p>
+
+                <h2>7.8 Euler’s Method</h2>
+                <p>A numerical approach to solving differential equations.</p>
+                <p><strong>Example:</strong></p>
+                <p>Using Euler’s Method with step size 0.1 to approximate y(0.5) given \( y' = y + x \) and y(0) = 1.
+                </p>
+                <p><strong>Solution:</strong> Step 1: \( y_1 = y_0 + f(x_0, y_0)\Delta x = 1 + (1+0) \cdot 0.1 = 1.1 \).
+                    Continue stepping forward to approximate y(0.5).</p>
+
+                <h2>7.9 Analytical, Numerical, and Graphical Approaches</h2>
+                <p>Solving differential equations using various methods: exact solutions, approximations, and
+                    visualizations.</p>
+                <p><strong>Example:</strong></p>
+                <p>Compare exact, Euler, and slope field methods on \( \frac{dy}{dx} = x + y \) with y(0)=1.</p>
+                <p><strong>Solution:</strong> Exact: \( y = Ce^x - x - 1 \). Euler and slope field as described in
+                    respective sections.</p>
             </div>
 
         </div>

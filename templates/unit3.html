@@ -5,95 +5,99 @@
     <div class="container">
         <div>
             <div>
-                <p>
-                    Unit 6: Integration and Accumulation of Change
-                    I. Antiderivatives & Indefinite Integrals
-                    An antiderivative F of a function f is a differentiable function whose derivative is equal to the
-                    original function f. If $F '(x) = f(x)$, then we say that F is an antiderivative of f.
+                <h1>AP Calculus BC - Unit 3 Notes</h1>
+                <h2>Differentiation: Composite, Implicit, and Inverse Functions</h2>
 
-                    An indefinite integral of a function f is a family of functions F that are antiderivatives of f.
+                <h3>3.1 The Chain Rule</h3>
+                <ul>
+                    <li>Used to differentiate composite functions.</li>
+                    <li>If \( y = f(g(x)) \), then \( y' = f'(g(x)) \cdot g'(x) \).</li>
+                    <li>Example: If \( y = (3x^2 + 2x + 1)^5 \), let \( u = 3x^2 + 2x + 1 \):
+                        <ul>
+                            <li>\( y = u^5 \rightarrow y' = 5u^4 \cdot \frac{du}{dx} \)</li>
+                            <li>\( \frac{du}{dx} = 6x + 2 \)</li>
+                            <li>Thus, \( y' = 5(3x^2 + 2x + 1)^4 \cdot (6x + 2) \)</li>
+                        </ul>
+                    </li>
+                </ul>
 
-                    $$ \int f(x) dx = F(x) + C + D $$
+                <h3>3.2 Implicit Differentiation</h3>
+                <ul>
+                    <li>Used when functions are not explicitly solved for one variable in terms of another.</li>
+                    <li>Differentiate both sides of the equation with respect to \( x \) using the Chain Rule.</li>
+                    <li>Example: If \( x^2 + y^2 = 1 \), differentiate each term:
+                        <ul>
+                            <li>\( \frac{d}{dx}(x^2) + \frac{d}{dx}(y^2) = \frac{d}{dx}(1) \)</li>
+                            <li>\( 2x + 2y \frac{dy}{dx} = 0 \rightarrow \frac{dy}{dx} = -\frac{x}{y} \)</li>
+                        </ul>
+                    </li>
+                </ul>
 
-                    C represents the constant of integration, which accounts for the entire family of solutions.
+                <h3>3.3 Differentiating Inverse Functions</h3>
+                <ul>
+                    <li>If \( y = f^{-1}(x) \), then \( \frac{dy}{dx} = \frac{1}{f'(f^{-1}(x))} \).</li>
+                    <li>Example: For \( y = \ln(x) \) (the inverse function of \( e^x \)):
+                        <ul>
+                            <li>\( \frac{dy}{dx} = \frac{1}{e^{\ln(x)}} = \frac{1}{x} \)</li>
+                        </ul>
+                    </li>
+                </ul>
 
-                    II. Fundamental Theorem of Calculus
-                    The First Fundamental Theorem of Calculus states:
+                <h3>3.4 Inverse Trigonometric Functions</h3>
+                <ul>
+                    <li>Derivatives of inverse trig functions:
+                        <ul>
+                            <li>\( \frac{d}{dx}(\sin^{-1}(x)) = \frac{1}{\sqrt{1-x^2}} \)</li>
+                            <li>\( \frac{d}{dx}(\cos^{-1}(x)) = -\frac{1}{\sqrt{1-x^2}} \)</li>
+                            <li>\( \frac{d}{dx}(\tan^{-1}(x)) = \frac{1}{1+x^2} \)</li>
+                            <li>\( \frac{d}{dx}(\cot^{-1}(x)) = -\frac{1}{1+x^2} \)</li>
+                            <li>\( \frac{d}{dx}(\sec^{-1}(x)) = \frac{1}{|x|\sqrt{x^2-1}} \)</li>
+                            <li>\( \frac{d}{dx}(\csc^{-1}(x)) = -\frac{1}{|x|\sqrt{x^2-1}} \)</li>
+                        </ul>
+                    </li>
+                </ul>
 
-                    If a function f is continuous on the interval [a,b] and F is an antiderivative of f on an interval
-                    containing [a,b], then
+                <h3>3.5 General Properties of Logarithmic and Exponential Functions</h3>
+                <ul>
+                    <li>Differentiation rules for exponential and logarithmic functions:
+                        <ul>
+                            <li>\( \frac{d}{dx}(e^x) = e^x \)</li>
+                            <li>\( \frac{d}{dx}(a^x) = a^x \ln(a) \)</li>
+                            <li>\( \frac{d}{dx}(\ln(x)) = \frac{1}{x} \)</li>
+                            <li>\( \frac{d}{dx}(\log_a(x)) = \frac{1}{x \ln(a)} \)</li>
+                        </ul>
+                    </li>
+                    <li>Logarithmic differentiation:
+                        <ul>
+                            <li>Useful for functions of the form \( y = f(x)^{g(x)} \).</li>
+                            <li>Take the natural logarithm of both sides and then differentiate.</li>
+                        </ul>
+                    </li>
+                    <li>Example: Differentiate \( y = x^x \):
+                        <ul>
+                            <li>\( \ln(y) = x \ln(x) \)</li>
+                            <li>\( \frac{1}{y} \frac{dy}{dx} = \ln(x) + 1 \)</li>
+                            <li>So, \( \frac{dy}{dx} = y (\ln(x) + 1) = x^x (\ln(x) + 1) \)</li>
+                        </ul>
+                    </li>
+                </ul>
 
-                    $$ \int_a^b f(x) dx = F(b) - F(a)
-                    $$
-
-                    The Second Fundamental Theorem of Calculus states:
-
-                    If f is a function continuous on an open interval I containing a, then, for every x in the interval,
-
-                    $$ \frac{d}{dx} \int_a^x f(t) dt = f(x) $$
-
-                    III. Definite Integrals
-                    The definite integral of a function f from a to b is the signed area between the x-axis and the
-                    graph of the function from x=a to x=b.
-
-                    $$ \int_a^b f(x) dx $$
-
-                    Note: If f(x) is greater than 0 for all x in the interval [a,b], then $\int_a^b f(x) dx$ is the
-                    exact area under the curve y=f(x) from x=a to x=b. If f(x) is less than 0, then the "area" is taken
-                    as negative.
-
-                    Properties of Definite Integrals:
-
-                    $\int_a^a f(x) dx = 0$
-                    $\int_a^b f(x) dx = -\int_b^a f(x) dx$
-                    $\int_a^b (f(x)±g(x)) dx = \int_a^b f(x) dx ± \int_a^b g(x) dx$
-                    $\int_a^b (cf(x)) dx = c \int_a^b f(x) dx$ (c is a constant)
-                    IV. Accumulation Functions
-                    An accumulation function is a function defined by an integral with variable limits:
-
-                    $$ F(x) = \int_a^x f(t) dt $$
-
-                    where f(t) is a continuous function on an interval I containing a.
-
-                    V. Techniques of Integration
-                    1. Substitution (u-substitution):
-
-                    If g’ is continuous on [a,b] and f is continuous on the range of u=g(x), then
-
-                    $$ \int_a^b f(g(x))g'(x) dx = \int_{g(a)}^{g(b)} f(u) du $$
-
-                    It allows us to transform the integral of a complex function into an integral that is easier to
-                    evaluate.
-
-                    2. Integration By Parts:
-
-                    $$ \int u dv = uv - \int v du $$
-
-                    It is useful when the integral is a product of two functions; one that is easily integrable after
-                    differentiation and another that simplifies upon differentiation.
-
-                    3. Partial Fractions:
-
-                    When integrating a rational function, where the degree of the numerator is less than the degree of
-                    the denominator, it can be useful to express the integrand as a sum of partial fractions. You can
-                    then integrate term by term.
-
-                    VI. Improper Integrals
-                    An improper integral is the limit of a definite integral as an endpoint of the interval of
-                    integration approaches either a specified real number, or ∞, or −∞. It can also be due to
-                    discontinuities in the function.
-
-                    Example:
-
-                    $$ \int_a^∞ f(x) dx = \lim_{b\to∞} \int_a^b f(x) dx $$
-
-                    For this to be defined, the limit must exist.
-
-                    These are the primary topics for Unit 6. Be sure to practice a variety of problems dealing with each
-                    type of integration in order to cement your understanding. Good luck with your studies!
-                </p>
+                <h3>3.6 Derivatives of Functions Defined Parametrically</h3>
+                <ul>
+                    <li>Used for parametric equations where \( x \) and \( y \) are functions of a parameter \( t \).
+                    </li>
+                    <li>If \( x = f(t) \) and \( y = g(t) \), then \( \frac{dy}{dx} =
+                        \frac{\frac{dy}{dt}}{\frac{dx}{dt}} \).</li>
+                    <li>Second derivative: \( \frac{d^2y}{dx^2} = \frac{d}{dx}\left(\frac{dy}{dx}\right) =
+                        \frac{\frac{d}{dt}\left(\frac{dy}{dx}\right)}{\frac{dx}{dt}} \).</li>
+                    <li>Example: Given \( x = t^2 \) and \( y = t^3 \):
+                        <ul>
+                            <li>\( \frac{dx}{dt} = 2t \) and \( \frac{dy}{dt} = 3t^2 \)</li>
+                            <li>\( \frac{dy}{dx} = \frac{3t^2}{2t} = \frac{3t}{2} \)</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-
         </div>
     </div>
 </section>

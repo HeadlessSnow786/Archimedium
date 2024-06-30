@@ -5,93 +5,82 @@
     <div class="container">
         <div>
             <div>
-                <p>
-                    Unit 6: Integration and Accumulation of Change
-                    I. Antiderivatives & Indefinite Integrals
-                    An antiderivative F of a function f is a differentiable function whose derivative is equal to the
-                    original function f. If $F '(x) = f(x)$, then we say that F is an antiderivative of f.
+                <h1>AP Calculus BC - Unit 9: Parametric Equations, Polar Coordinates, and Vector-Valued Functions</h1>
 
-                    An indefinite integral of a function f is a family of functions F that are antiderivatives of f.
+                <h2>1. Parameterizing Motion</h2>
+                <p>Parametric equations describe motion by defining position as functions of time.</p>
+                <p><strong>Example:</strong> Given \( x(t) = t^2 \) and \( y(t) = t + 1 \):
+                <ul>
+                    <li>Find the position at \( t = 2 \).</li>
+                </ul>
+                <p><strong>Solution:</strong> \( x(2) = 2^2 = 4 \) and \( y(2) = 2 + 1 = 3 \). Thus, the position is \(
+                    (4, 3) \).</p>
 
-                    $$ \int f(x) dx = F(x) + C + D $$
+                <h2>2. Calculus with Parametric Curves</h2>
+                <p>To find the derivatives, use:
+                <pre>dx/dt and dy/dt</pre>
+                <p><strong>Example:</strong> Given \( x(t) = t^2 \) and \( y(t) = t + 1 \), find dy/dx at \( t = 2 \).
+                <ul>
+                    <li>First, compute dx/dt = 2t and dy/dt = 1.</li>
+                    <li>Thus,
+                        \[
+                        \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}} = \frac{1}{2t} \text{ at } t=2 =
+                        \frac{1}{4}.
+                        \]
+                    </li>
+                </ul>
 
-                    C represents the constant of integration, which accounts for the entire family of solutions.
+                <h2>3. Polar Coordinates and Graphs</h2>
+                <p>Polar coordinates use angles and radii. A point is defined as \( (r, \theta) \).</p>
+                <p><strong>Example:</strong> Convert \( (3, \pi/4) \) to Cartesian coordinates.
+                <ul>
+                    <li>Use \( x = r \cos(\theta) \) and \( y = r \sin(\theta) \).</li>
+                    <li>Thus, \( x = 3 \cos(\pi/4) = 3 \times \frac{\sqrt{2}}{2} = \frac{3\sqrt{2}}{2} \)</li>
+                    <li>and \( y = 3 \sin(\pi/4) = 3 \times \frac{\sqrt{2}}{2} = \frac{3\sqrt{2}}{2} \).</li>
+                </ul>
 
-                    II. Fundamental Theorem of Calculus
-                    The First Fundamental Theorem of Calculus states:
+                <h2>4. Derivatives of Polar Functions</h2>
+                <p>Find \( \frac{dy}{dx} \) for polar functions \( r(\theta) \) using:
+                    \[
+                    \frac{dy}{dx} = \frac{\frac{d}{d\theta} (r \sin(\theta))}{\frac{d}{d\theta} (r \cos(\theta))}.
+                    \]</p>
+                <p><strong>Example:</strong> For \( r(\theta) = 2 + \theta \):
+                <ul>
+                    <li>Find \( \frac{dy}{d\theta} = \frac{d}{d\theta}((2 + \theta) \sin(\theta)) \).
+                    <li>Apply the product rule:
+                        \[ \frac{dy}{d\theta} = (2 + \theta) \cos(\theta) + \sin(\theta) \]
+                    <li>And \( \frac{dx}{d\theta} = \frac{d}{d\theta}((2 + \theta) \cos(\theta)) \).
+                        \[ \frac{dx}{d\theta} = -(2 + \theta) \sin(\theta) + \cos(\theta) \]
+                    <li>Thus,
+                        \[ \frac{dy}{dx} = \frac{(2 + \theta) \cos(\theta) + \sin(\theta)}{-(2 + \theta) \sin(\theta) +
+                        \cos(\theta)} \]
+                </ul>
 
-                    If a function f is continuous on the interval [a,b] and F is an antiderivative of f on an interval
-                    containing [a,b], then
-
-                    $$ \int_a^b f(x) dx = F(b) - F(a)
-                    $$
-
-                    The Second Fundamental Theorem of Calculus states:
-
-                    If f is a function continuous on an open interval I containing a, then, for every x in the interval,
-
-                    $$ \frac{d}{dx} \int_a^x f(t) dt = f(x) $$
-
-                    III. Definite Integrals
-                    The definite integral of a function f from a to b is the signed area between the x-axis and the
-                    graph of the function from x=a to x=b.
-
-                    $$ \int_a^b f(x) dx $$
-
-                    Note: If f(x) is greater than 0 for all x in the interval [a,b], then $\int_a^b f(x) dx$ is the
-                    exact area under the curve y=f(x) from x=a to x=b. If f(x) is less than 0, then the "area" is taken
-                    as negative.
-
-                    Properties of Definite Integrals:
-
-                    $\int_a^a f(x) dx = 0$
-                    $\int_a^b f(x) dx = -\int_b^a f(x) dx$
-                    $\int_a^b (f(x)±g(x)) dx = \int_a^b f(x) dx ± \int_a^b g(x) dx$
-                    $\int_a^b (cf(x)) dx = c \int_a^b f(x) dx$ (c is a constant)
-                    IV. Accumulation Functions
-                    An accumulation function is a function defined by an integral with variable limits:
-
-                    $$ F(x) = \int_a^x f(t) dt $$
-
-                    where f(t) is a continuous function on an interval I containing a.
-
-                    V. Techniques of Integration
-                    1. Substitution (u-substitution):
-
-                    If g’ is continuous on [a,b] and f is continuous on the range of u=g(x), then
-
-                    $$ \int_a^b f(g(x))g'(x) dx = \int_{g(a)}^{g(b)} f(u) du $$
-
-                    It allows us to transform the integral of a complex function into an integral that is easier to
-                    evaluate.
-
-                    2. Integration By Parts:
-
-                    $$ \int u dv = uv - \int v du $$
-
-                    It is useful when the integral is a product of two functions; one that is easily integrable after
-                    differentiation and another that simplifies upon differentiation.
-
-                    3. Partial Fractions:
-
-                    When integrating a rational function, where the degree of the numerator is less than the degree of
-                    the denominator, it can be useful to express the integrand as a sum of partial fractions. You can
-                    then integrate term by term.
-
-                    VI. Improper Integrals
-                    An improper integral is the limit of a definite integral as an endpoint of the interval of
-                    integration approaches either a specified real number, or ∞, or −∞. It can also be due to
-                    discontinuities in the function.
-
-                    Example:
-
-                    $$ \int_a^∞ f(x) dx = \lim_{b\to∞} \int_a^b f(x) dx $$
-
-                    For this to be defined, the limit must exist.
-
-                    These are the primary topics for Unit 6. Be sure to practice a variety of problems dealing with each
-                    type of integration in order to cement your understanding. Good luck with your studies!
+                <h2>5. Vector-Valued Functions</h2>
+                <p>Express motion through vectors. The position vector \( \mathbf{r}(t) = \langle x(t), y(t) \rangle \).
                 </p>
+                <p><strong>Example:</strong> Given \( \mathbf{r}(t) = \langle t^2, t + 1 \rangle \):
+                <ul>
+                    <li>Find velocity \(\mathbf{v}(t)\): it's the derivative of \( \mathbf{r}(t) \).
+                        \(\mathbf{v}(t) = \langle 2t, 1 \rangle \).</li>
+                    <li>Find the acceleration \(\mathbf{a}(t)\): it's the derivative of \( \mathbf{v}(t) \).
+                        \(\mathbf{a}(t) = \langle 2, 0 \rangle \).</li>
+                </ul>
+
+                <h2>6. Speed, Arc Length, and Curvature</h2>
+                <p>Speed is the magnitude of the velocity vector: \( \| \mathbf{v}(t) \| = \sqrt{(dx/dt)^2 + (dy/dt)^2}
+                    \).</p>
+                <p>Arc length from \( a \) to \( b \) is:
+                    \[
+                    \int_a^b \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2} dt.
+                    \]</p>
+                <p><strong>Example:</strong> Given \( x(t) = t^2 \) and \( y(t) = t + 1 \) from \( t=0 \) to \( t=1 \):
+                <ul>
+                    <li>Find speed: \( \sqrt{(2t)^2 + 1^2} = \sqrt{4t^2 + 1} \).</li>
+                    <li>Arc length: \[ \int_0^1 \sqrt{4t^2 + 1} dt.
+                        \]</li>
+                </ul>
+                </body>
             </div>
 
         </div>

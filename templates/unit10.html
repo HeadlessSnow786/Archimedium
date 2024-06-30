@@ -5,95 +5,106 @@
     <div class="container">
         <div>
             <div>
-                <p>
-                    Unit 6: Integration and Accumulation of Change
-                    I. Antiderivatives & Indefinite Integrals
-                    An antiderivative F of a function f is a differentiable function whose derivative is equal to the
-                    original function f. If $F '(x) = f(x)$, then we say that F is an antiderivative of f.
+                <h1>AP Calculus BC: Unit 10 - Infinite Sequences and Series</h1>
 
-                    An indefinite integral of a function f is a family of functions F that are antiderivatives of f.
+                <h2>1. Sequences</h2>
+                <p>A sequence is an ordered list of numbers that often follow a specific pattern. Formally, a sequence
+                    is a function whose domain is the set of natural numbers.</p>
+                <h3>Example:</h3>
+                <p>Given the sequence \(a_n = \frac{1}{n}\), find the first 3 terms.</p>
+                <p>Solution:</p>
+                <pre>a_1 = \frac{1}{1} = 1
+a_2 = \frac{1}{2} = 0.5
+a_3 = \frac{1}{3} \approx 0.333
+</pre>
 
-                    $$ \int f(x) dx = F(x) + C + D $$
+                <h2>2. Series and Partial Sums</h2>
+                <p>A series is the sum of the terms of a sequence. The partial sum is the sum of the first \(n\) terms
+                    of the series.</p>
+                <h3>Example:</h3>
+                <p>Given the series \( \sum_{n=1}^{\infty} \frac{1}{n^2} \), find the partial sum \(S_3\).</p>
+                <p>Solution:</p>
+                <pre>S_3 = \frac{1}{1^2} + \frac{1}{2^2} + \frac{1}{3^2} = 1 + \frac{1}{4} + \frac{1}{9} \approx 1 + 0.25 + 0.111 = 1.361
+</pre>
 
-                    C represents the constant of integration, which accounts for the entire family of solutions.
+                <h2>3. Convergence and Divergence of Series</h2>
+                <p>A series converges if the sequence of its partial sums approaches a finite limit. Otherwise, it
+                    diverges.</p>
+                <h3>Example:</h3>
+                <p>Does the series \( \sum_{n=1}^{\infty} \frac{1}{n} \) converge or diverge?</p>
+                <p>Solution:</p>
+                <pre>This is the harmonic series, which is known to diverge.
+</pre>
 
-                    II. Fundamental Theorem of Calculus
-                    The First Fundamental Theorem of Calculus states:
+                <h2>4. The Integral Test</h2>
+                <p>If \(f(n)\) is a positive, continuous, and decreasing function for \(n \geq 1\) and \(a_n = f(n)\),
+                    then the series \( \sum_{n=1}^{\infty} a_n \) and the improper integral \( \int_{1}^{\infty} f(x) \,
+                    dx \) either both converge or both diverge.</p>
+                <h3>Example:</h3>
+                <p>Use the Integral Test to determine whether \( \sum_{n=1}^{\infty} \frac{1}{n^2} \) converges.</p>
+                <p>Solution:</p>
+                <pre>\int_{1}^{\infty} \frac{1}{x^2} \, dx = \left[ -\frac{1}{x} \right]_1^{\infty} = 1 \Rightarrow \sum_{n=1}^{\infty} \frac{1}{n^2} \text{ converges.}
+</pre>
 
-                    If a function f is continuous on the interval [a,b] and F is an antiderivative of f on an interval
-                    containing [a,b], then
+                <h2>5. The Comparison Test</h2>
+                <p>If \(0 \leq a_n \leq b_n\) for all \(n\) and \( \sum_{n=1}^{\infty} b_n \) converges, then \(
+                    \sum_{n=1}^{\infty} a_n \) also converges. If \( \sum_{n=1}^{\infty} a_n \) diverges, then \(
+                    \sum_{n=1}^{\infty} b_n \) also diverges.</p>
+                <h3>Example:</h3>
+                <p>Determine if \( \sum_{n=1}^{\infty} \frac{1}{n(n+1)} \) converges using the Comparison Test.</p>
+                <p>Solution:</p>
+                <pre>\frac{1}{n(n+1)} < \frac{1}{n^2} \text{ and we know } \sum_{n=1}^{\infty} \frac{1}{n^2} \text{ converges.}
+\Rightarrow \sum_{n=1}^{\infty} \frac{1}{n(n+1)} \text{ converges by Comparison Test.}
+</pre>
 
-                    $$ \int_a^b f(x) dx = F(b) - F(a)
-                    $$
-
-                    The Second Fundamental Theorem of Calculus states:
-
-                    If f is a function continuous on an open interval I containing a, then, for every x in the interval,
-
-                    $$ \frac{d}{dx} \int_a^x f(t) dt = f(x) $$
-
-                    III. Definite Integrals
-                    The definite integral of a function f from a to b is the signed area between the x-axis and the
-                    graph of the function from x=a to x=b.
-
-                    $$ \int_a^b f(x) dx $$
-
-                    Note: If f(x) is greater than 0 for all x in the interval [a,b], then $\int_a^b f(x) dx$ is the
-                    exact area under the curve y=f(x) from x=a to x=b. If f(x) is less than 0, then the "area" is taken
-                    as negative.
-
-                    Properties of Definite Integrals:
-
-                    $\int_a^a f(x) dx = 0$
-                    $\int_a^b f(x) dx = -\int_b^a f(x) dx$
-                    $\int_a^b (f(x)±g(x)) dx = \int_a^b f(x) dx ± \int_a^b g(x) dx$
-                    $\int_a^b (cf(x)) dx = c \int_a^b f(x) dx$ (c is a constant)
-                    IV. Accumulation Functions
-                    An accumulation function is a function defined by an integral with variable limits:
-
-                    $$ F(x) = \int_a^x f(t) dt $$
-
-                    where f(t) is a continuous function on an interval I containing a.
-
-                    V. Techniques of Integration
-                    1. Substitution (u-substitution):
-
-                    If g’ is continuous on [a,b] and f is continuous on the range of u=g(x), then
-
-                    $$ \int_a^b f(g(x))g'(x) dx = \int_{g(a)}^{g(b)} f(u) du $$
-
-                    It allows us to transform the integral of a complex function into an integral that is easier to
-                    evaluate.
-
-                    2. Integration By Parts:
-
-                    $$ \int u dv = uv - \int v du $$
-
-                    It is useful when the integral is a product of two functions; one that is easily integrable after
-                    differentiation and another that simplifies upon differentiation.
-
-                    3. Partial Fractions:
-
-                    When integrating a rational function, where the degree of the numerator is less than the degree of
-                    the denominator, it can be useful to express the integrand as a sum of partial fractions. You can
-                    then integrate term by term.
-
-                    VI. Improper Integrals
-                    An improper integral is the limit of a definite integral as an endpoint of the interval of
-                    integration approaches either a specified real number, or ∞, or −∞. It can also be due to
-                    discontinuities in the function.
-
-                    Example:
-
-                    $$ \int_a^∞ f(x) dx = \lim_{b\to∞} \int_a^b f(x) dx $$
-
-                    For this to be defined, the limit must exist.
-
-                    These are the primary topics for Unit 6. Be sure to practice a variety of problems dealing with each
-                    type of integration in order to cement your understanding. Good luck with your studies!
+                <h2>6. The Limit Comparison Test</h2>
+                <p>Given two series \(\sum a_n\) and \(\sum b_n\) with positive terms, if \( \lim_{n \to \infty}
+                    \frac{a_n}{b_n} = c \) where \(c\) is a positive and finite number, then either both series converge
+                    or both diverge.</p>
+                <h3>Example:</h3>
+                <p>Use the Limit Comparison Test to determine if \( \sum_{n=1}^{\infty} \frac{n}{n^3 + 1} \) converges.
                 </p>
-            </div>
+                <p>Solution:</p>
+                <pre>\lim_{n \to \infty} \frac{\frac{n}{n^3 + 1}}{\frac{1}{n^2}} = \lim_{n \to \infty} \frac{n^3}{n^3 + 1} = 1
+\Rightarrow \sum_{n=1}^{\infty} \frac{n}{n^3 + 1} \text{ converges by comparison to } \sum_{n=1}^{\infty} \frac{1}{n^2}.
+</pre>
 
+                <h2>7. Alternating Series Test</h2>
+                <p>An alternating series is a series whose terms are alternately positive and negative. It converges if
+                    the absolute value of the terms decreases monotonically to 0.</p>
+                <h3>Example:</h3>
+                <p>Determine if the series \( \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n} \) converges.</p>
+                <p>Solution:</p>
+                <pre>The terms \frac{1}{n} decrease monotonically to 0.
+\Rightarrow \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n} \text{ converges by the Alternating Series Test.}
+</pre>
+
+                <h2>8. The Ratio Test</h2>
+                <p>For a series \(\sum a_n\), if \(\lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| = L\):
+                    - If \(L < 1\), the series converges absolutely. - If \(L> 1\) or \(L = \infty\), the series
+                        diverges.
+                        - If \(L = 1\), the test is inconclusive.</p>
+                <h3>Example:</h3>
+                <p>Determine if the series \( \sum_{n=1}^{\infty} \frac{n!}{3^n} \) converges using the Ratio Test.</p>
+                <p>Solution:</p>
+                <pre>\lim_{n \to \infty} \left| \frac{(n+1)! / 3^{n+1}}{n! / 3^n} \right|
+= \lim_{n \to \infty} \left| \frac{(n+1)}{3} \right| = \infty
+\Rightarrow \sum_{n=1}^{\infty} \frac{n!}{3^n} \text{ diverges by the Ratio Test.}
+</pre>
+
+                <h2>9. The Root Test</h2>
+                <p>For a series \(\sum a_n\), if \(\lim_{n \to \infty} \sqrt[n]{|a_n|} = L\):
+                    - If \(L < 1\), the series converges absolutely. - If \(L> 1\) or \(L = \infty\), the series
+                        diverges.
+                        - If \(L = 1\), the test is inconclusive.</p>
+                <h3>Example:</h3>
+                <p>Determine if the series \( \sum_{n=1}^{\infty} \left( \frac{1}{2} \right)^n \) converges using the
+                    Root Test.</p>
+                <p>Solution:</p>
+                <pre>\lim_{n \to \infty} \sqrt[n]{\left( \frac{1}{2} \right)^n} = \frac{1}{2}
+\Rightarrow \sum_{n=1}^{\infty} \left( \frac{1}{2} \right)^n \text{ converges by the Root Test.}
+</pre>
+            </div>
         </div>
     </div>
 </section>

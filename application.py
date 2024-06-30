@@ -14,6 +14,10 @@ def index():
    # else:
        # return render_template('inputTest.html')
 
+@application.route('/about')
+def about():
+    return render_template('about.html')
+
 @application.route('/unit1')
 def unit1():
     return render_template('unit1.html')
